@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('username')->unique();
+            $table->string('avatar')->nullable()->default('https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png');
             $table->boolean('is_admin')->default(false);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
